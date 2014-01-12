@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/cap2all" />
+
+    <ImageButton
+        android:id="@+id/btnAtualizar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/btnSearch"
+        android:src="@drawable/refresh" />
+    
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/btnVender"
+        android:layout_toLeftOf="@+id/btnVender"
+        android:scaleType="centerInside"
+        android:src="@drawable/search" />
+    
+    <ImageButton
+        android:id="@+id/btnVender"
+        android:layout_width="75dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+         android:scaleType="centerInside"
+         android:src="@drawable/sale" />
+
+    <ExpandableListView
+        android:id="@+id/expLViewTransacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="22dp" >
+            
+    </ExpandableListView>
+    
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageButton
+        android:id="@+id/imgButtonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtStatus"
+        android:layout_alignRight="@+id/expLViewTransacoes"
+        android:src="@drawable/next" 
+        android:background="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/imgButtonPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expLViewTransacoes"
+        android:layout_alignTop="@+id/imgButtonNext"
+        android:src="@drawable/previous" 
+         android:background="@android:color/transparent"/>
+    
+</RelativeLayout>
